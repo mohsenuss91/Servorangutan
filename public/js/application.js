@@ -8,11 +8,10 @@ $(document).ready(function() {
     $('.questions').append("<hr>"+question);
     question_counter++;
 
-    $(this).next().children().last().prev().find('input').click(function(event) {
+    $(this).next().children().last().prev().find('input[type=button]').click(function(event) {
       var option = "<input type='text' name='option_"+option_counter+"'><br >";
       $(this).parent().append(option)
       option_counter++;
     })
-
   });
 });
