@@ -1,4 +1,10 @@
 class User < ActiveRecord::Base
+  has_many :surveys
+  has_many :responses
+  has_many :options, :through => :responses
+  has_many :completions
+  has_many :surveys, :through => :completions
+
   include BCrypt
 
   validates :email, :format => { :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i }
