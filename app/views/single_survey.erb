@@ -1,5 +1,3 @@
-<!-- We've been passed @survey -->
-
 <%= @survey.name %>
 <form action="/submit_responses/<%= @survey.id %>" method="POST">
   <% @survey.questions.each do |question| %>
