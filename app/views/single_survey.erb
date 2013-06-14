@@ -1,15 +1,15 @@
 <!-- We've been passed @survey -->
 
 <%= @survey.name %>
-<form action="/submit_responses/<%= survey.id %>" method="POST">
-  <ol>
-    <% @survey.questions.each do |question| %>
-      <%= question.text %> 
+<form action="/submit_responses/<%= @survey.id %>" method="POST">
+  <% @survey.questions.each do |question| %>
+    <%= question.text %> 
+    <ol>
       <% question.options.each do |option| %>
         <input type="radio" name="<%= question.id %>" value="<%= option.id %>">
         <li><%= option.text %></li>
       <% end %>
-    <% end %>
-  </ol>
+    </ol>
+  <% end %>
   <input type="submit">
 </form>
