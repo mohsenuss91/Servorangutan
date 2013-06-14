@@ -1,12 +1,18 @@
 <h2>Create a Survey</h2>
 
 <form action="/create_survey" method="post" name="survey">
-  <input type="text" name="survey_name" placeholder="survey name">
-  <button id="addquestion">Add a question</button>
+  <label for="survey_name"><h3>Survey Name</h3>
+  <input type="text" name="survey_name" placeholder="Favorite Things" size="60">
+
+  <p></p>
+  <button id="addquestion" class="littlebluebutton">Add a question</button>
+
   <div class="questions">
 
   </div>
-  <input type="submit" value="create new survey">
+  <p></p>
+
+  <input type="submit" value="Create new survey" class="bluebutton">
 
 
   <!-- <input type="text" name="question" placeholder="question"> -->
