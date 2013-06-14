@@ -1,7 +1,18 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+  var question_counter = 0;
+  var option_counter = 0;
+  $('#addquestion').on('click', function(event) {
+    event.preventDefault(); 
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+    var question = "<div class='choices'><input type='text' name='question_" + question_counter + "'><input type='button' class='add_choice' value='Add a choice'></div><br >";
+    $('.questions').append("<hr>"+question);
+    question_counter++;
+
+    $(this).next().children().last().prev().find('input').click(function(event) {
+      var option = "<input type='text' name='option_"+option_counter+"'><br >";
+      $(this).parent().append(option)
+      option_counter++;
+    })
+
+  });
 });

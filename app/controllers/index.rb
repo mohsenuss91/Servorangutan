@@ -22,3 +22,14 @@ end
 get '/surveys/:survey_id/responses' do
   "Number of completions for survey " + params[:survey_id] + ": #{Survey.find(params[:survey_id]).completions.count}"
 end
+
+get '/survey/new' do
+  erb :create_survey
+end
+
+post '/create_survey' do
+  # params.
+  #when key is question, Question.create!
+    #until you hit another question, take the KVP and Option.create!
+    #start_with?
+end

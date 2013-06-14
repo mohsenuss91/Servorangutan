@@ -1,15 +1,20 @@
 <h1> Create a Survey </h1>
 
-<form action="/create_survey" method="post">
-  <input type="text" placeholder="survey name">
+<form action="/create_survey" method="post" name="survey">
+  <input type="text" name="survey_name" placeholder="survey name">
+  <button id="addquestion">Add a question</button>
+  <div class="questions">
 
-  <input type="text" name="question" placeholder="question">
-  <input type="text" name="option1" placeholder="option 1">
-  <input type="text" name="option2" placeholder="option 2">
-  <input type="text" name="option3" placeholder="option 3">
+  </div>
   <input type="submit" value="create new survey">
-</form>
 
+
+  <!-- <input type="text" name="question" placeholder="question"> -->
+  <!-- <input type="text" name="option1" placeholder="option 1">
+  <input type="text" name="option2" placeholder="option 2">
+  <input type="text" name="option3" placeholder="option 3"> -->
+
+</form>
 <!-- when we push submit...
     we'll have a sweet params hash in the controller...
      -->
