@@ -1,9 +1,113 @@
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+body {
+  font-family: 'Open Sans', Arial;
+  font-size: 1em;
+  font-weight: 400;
+  color: #444444;
 }
-th {
-  text-align: left;
+
+a {
+  text-decoration: none;
+  color: #3d94f6;
+}
+
+.nav a {
+  color: #97c4fe;
+}
+
+.nav a:hover {
+  color: #ffffff;
+}
+
+table, tr, td {
+  padding: 5px 25px 5px 0;
+  width: 100%;
+}
+
+.tablehead {
+  font-weight: 700;
+}
+
+.create {
+  float: right;
+  margin-top: -95px;
+}
+
+nav {
+  position: fixed;
+  background: #1e62d0;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  margin: 0 auto;
+  padding: 20px 0px 20px 20px;
+}
+
+.container {
+  padding-top: 80px;
+  padding-bottom: 20px;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.nav {
+  display: inline;
+  margin: 0;
+  color: #ffffff;
+}
+
+.nav ul {
+  padding: 0px;
+  display: inline;
+}
+
+.nav li {
+  padding-right: 20px;
+  padding-left: 20px;
+  border-left: 1px solid white;
+  display: inline;
+}
+
+li.first {
+  border-left: 0;
+  display: inline;
+  margin: 0;
+  padding-right: 20px;
+}
+
+h1 {
+  font-weight: 800;
+  color: #1e62d0;
+  font-size: 3.5em;
+}
+
+/*Ugly CSS for fancy button*/
+
+.bluebutton {
+  -moz-box-shadow:inset 0px 1px 0px 0px #97c4fe;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #97c4fe;
+  box-shadow:inset 0px 1px 0px 0px #97c4fe;
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3d94f6), color-stop(1, #1e62d0) );
+  background:-moz-linear-gradient( center top, #3d94f6 5%, #1e62d0 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0');
+  background-color:#3d94f6;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  border:1px solid #337fed;
+  display:inline-block;
+  color:#ffffff;
+  font-family:arial;
+  font-size:20px;
+  font-weight:normal;
+  padding:12px 20px;
+  text-decoration:none;
+  text-shadow:1px 1px 0px #1570cd;
+}.bluebutton:hover {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #1e62d0), color-stop(1, #3d94f6) );
+  background:-moz-linear-gradient( center top, #1e62d0 5%, #3d94f6 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e62d0', endColorstr='#3d94f6');
+  background-color:#1e62d0;
+}.bluebutton:active {
+  position:relative;
+  top:1px;
 }
