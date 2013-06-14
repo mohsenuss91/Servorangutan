@@ -39,4 +39,5 @@ post '/create_survey' do
       latest_question.options << Option.create(text: kvp[1])
     end
   end
+  redirect '/'
 end
