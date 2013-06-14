@@ -7,10 +7,33 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700,800">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Bitter:400,700,400italic">
+
   <title></title>
 </head>
 <body>
+  <nav>
+    <% if logged_in? %>
+      <ul class="nav">
+        <li class="first">Welcome, name</li>
+        <li>Make survey</li>
+        <li>Other things</li>
+      </ul>
+    <% else %>
+      <ul class="nav">
+        <li class="first">Hello!</li>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/signup">Signup</a></li>
+      </ul>
+    <% end %>
+  </nav>
+
   <div class="container">
+    <div class="header">
+      <h1>Servorangutan</h1>
+    </div>
+
     <%= yield %>
   </div>
 </body>

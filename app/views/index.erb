@@ -1,12 +1,14 @@
-<form action="/survey/new">
-  <input type="submit" value="Create new survey">
-</form>
+<div class="create">
+  <form action="/survey/new">
+    <input type="submit" value="Create new survey" class="bluebutton">
+  </form>
+</div>
 
 <table>
-  <th>
+  <tr class="tablehead">
     <td>Survey Name</td>
     <td>Responses</td>
-  </th>
+  </tr>
   <% @surveys.each do |survey| %>
     <tr>
       <td><a href="/surveys/<%= survey.id %>"><%= survey.name %></a></td>
