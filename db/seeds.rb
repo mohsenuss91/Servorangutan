@@ -17,7 +17,7 @@ end
 end
 
 10.times do 
-  Response.create(:user_id => rand(1..10), :option_id => (1..150))
+  Response.create(:user_id => rand(1..10), :option_id => rand(1..150))
 end
 
 # NO COMPLETIONS NECESSARY :(((((
